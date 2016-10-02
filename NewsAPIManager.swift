@@ -5,7 +5,7 @@
 //  Copyright © 2016 Wyatt Mufson. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 enum NewsSources : String {
     case AustralianBroadcastCorporation = "abc-news-au"
