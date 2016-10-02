@@ -1,6 +1,8 @@
 # NewsAPI-Swift
 Swift code for NewsAPI.org
 
+### Written in Swift 3 for use with Xcode 8
+
 ## How to use it
 
 
