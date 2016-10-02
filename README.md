@@ -11,7 +11,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
         let key = "YOUR-newsapi.org-KEY"
         let nam = NewsAPIManager() // Initialize News API Manager
 
-        nam.getArticles(source: .CNN, key: key){response in // Getting articles from CNN
+        nam.getArticles(source: .CNN, key: key){data in // Getting articles from CNN
             do {
                 let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
                 
