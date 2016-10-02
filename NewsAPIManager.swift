@@ -79,7 +79,7 @@ enum NewsSources : String {
 
 class NewsAPIManager: NSObject {
     
-    func getArticles(source:NewsSources, key:String, completionHandler: @escaping (String) -> ()) {
+    func getArticles(source:NewsSources, key:String, completionHandler: @escaping (Data) -> ()) {
         
         let site = "https://newsapi.org/v1/articles?source=\(source.rawValue)&sortBy=top&apiKey=\(key)"
         let url = URL(string: site)
@@ -91,10 +91,9 @@ class NewsAPIManager: NSObject {
         session.dataTask(with: request) {data, response, err in
             
             if (err != nil) {
-                completionHandler("Error")
+                completionHandler(Data())
             } else {
-                let str = String(data: data!, encoding: String.Encoding.utf8)
-                completionHandler(str!)
+                completionHandler(data!)
             }
             
             
