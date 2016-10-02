@@ -8,7 +8,9 @@ This is a free to use service for Swift using the NewsAPI.org API. This works by
 ## Set Up
 
 1) Go to https://newsapi.org
+
 2) Click  "Get API Key" (or go to https://newsapi.org/register)
+
 3) Include 'powered by' attribution link back to NewsAPI.org as part of free use agreement
 
 ## How to use it
