@@ -3,6 +3,14 @@ Swift code for NewsAPI.org
 
 **Written in Swift 3 for use with Xcode 8**
 
+This is a free to use service for Swift using the NewsAPI.org API. This works by calling an HTTP GET request, passing a source (listed in the enum) and an API key (instructions below).
+
+## Set Up
+
+1) Go to https://newsapi.org
+2) Click  "Get API Key" (or go to https://newsapi.org/register)
+3) Include 'powered by' attribution link back to NewsAPI.org as part of free use agreement
+
 ## How to use it
 
 
