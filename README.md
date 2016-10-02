@@ -12,7 +12,20 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
         let nam = NewsAPIManager() // Initialize News API Manager
 
         nam.getArticles(source: .CNN, key: key){response in // Getting articles from CNN
-            print(response) // String response of JSON
+            do {
+                let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
+                
+                if let jsonArray = json as? [String: AnyObject] {
+                    if let articles = jsonArray["articles"] as? [[String : AnyObject]] {
+                        for article in articles { // Get each article
+                            print("\nArticle: \(article)\n")
+                        }
+                    }
+                }
+                
+            } catch {
+                print("error serializing JSON: \(error)")
+            }
         }
         
         return true
