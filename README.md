@@ -27,7 +27,7 @@ Fields are not guaranteed to be non-nil.
 
 ## How to use it
 
-This is an example of calling the getArticles() function to get all the top articles from CNN. Called in the application didFinishLaunchingWithOptions and stores the article in the UserDefaults if it is not already there. Note that this is called asynchronously.
+This is an example of calling the `getArticles(source: _, key: _)` function to get all the top articles from CNN. Called in the `application didFinishLaunchingWithOptions` and stores the article in `UserDefaults` if it is not already there. Note that this is called asynchronously.
 
 ```
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
